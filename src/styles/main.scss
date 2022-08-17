@@ -1,5 +1,70 @@
-$bg: #b4e2da;
+$text-color: #27300f;
+$orange: #d26a22;
+$white: #ffffff;
 
-body {
-    background-color: $bg;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &__nav {
+        display: flex;
+        gap: 48px;
+        list-style-type: none;
+        margin: 0;
+        padding-left: 0;
+    }
+
+    &__link {
+        font-size: 16px;
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $orange;
+        }
+    } 
+
+    &__tel {
+        font-size: 16px;
+        color: $text-color;
+        text-decoration: none;
+
+        &:hover {
+            color: $orange;
+        }
+    }
+
+    &__cart {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: $orange;
+        background-image: url(../images/cart-black.svg);
+        background-repeat: no-repeat;
+        background-size: 17px 15px;
+        background-position: center center;
+    }
+
+    &__counter {
+        position: absolute;
+        right: 8px;
+        top: 6px;
+        font-size: 8px;
+        color: $white;
+    }
+}
+
+.logo {
+    background-image: url(../images/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 123px;
+    height: 32px;
 }
