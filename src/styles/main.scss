@@ -14,6 +14,22 @@ html {
 body {
     font-size: 1.6rem;
     font-family: $font-jost;
+    color: $green;
+}
+
+.main {
+    background: url('../images/main.png') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    &__item {
+        max-width: 37.8rem;
+        margin-left: 12rem;
+        margin-top: 6rem;
+    }
+
+    &__link {
+        margin-top: 6rem;
+    }
 }
 
 .header {
@@ -22,9 +38,7 @@ body {
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: 4rem;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 4rem 15px 0 15px;
 
     &__nav {
         display: flex;
@@ -35,7 +49,6 @@ body {
     }
 
     &__link {
-        font-size: 1.6rem;
         color: $green;
         text-decoration: none;
 
@@ -45,7 +58,6 @@ body {
     } 
 
     &__tel {
-        font-size: 1.6rem;
         font-weight: 500;
         color: $green;
         text-decoration: none;
@@ -90,3 +102,49 @@ body {
     width: 123px;
     height: 32px;
 }
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.title {
+    margin: 0;
+    font-family: $font-cormorant;
+    font-weight: 700;
+    font-size: 8rem;
+
+    &__span {
+        font-style: italic;
+    }
+
+    &_block {
+        .title__span {
+            display: block;
+        }
+    }
+}
+
+.description {
+    margin: 0;
+    &_size-s {
+        font-size: 1.8rem;
+    }
+}
+
+.link {
+    display: inline-block;
+    padding: 2.5rem 4.2rem;
+    border-radius: 3.8rem;
+    background-color: $orange;
+    box-shadow: 0px 1rem 1.2rem .2rem rgba(207, 92, 13, 0.2);
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+}
+
+
+  
