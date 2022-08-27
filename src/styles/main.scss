@@ -18,6 +18,7 @@ body {
 }
 
 .main {
+    position: relative;
     padding-bottom: 187px;
     background: url('../images/main.png') no-repeat;
     background-size: cover;
@@ -35,15 +36,15 @@ body {
 
     &__flex {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
-        gap: 30px;
+        gap: 180px;
     }
 
     &__cover {
         position: relative;
-        flex-basis: 732px;
-        height: 732px;
+        flex-basis: 762px;
+        height: 762px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -66,6 +67,8 @@ body {
     &__img {
         width: 92%;
         height: 92%;
+        border-radius: 100%;
+        box-shadow: 10px 20px 30px 0 rgb(0 0 0 / 30%);
     }
 
     &__btn {
@@ -123,36 +126,36 @@ body {
 
     &__tomato {
         position: absolute;
-        right: 0;
-        bottom: -90px;
+        right: 60px;
+        bottom: 0;
         width: 110px;
     }
 
     &__pepper {
         position: absolute;
-        top: 220px;
-        left: -200px;
+        top: 400px;
+        left: 40px;
         width: 86px;
     }
 
     &__cucumber {
         position: absolute;
-        top: -137px;
+        top: 0;
         left: 35%;
         width: 85px;
     }
 
     &__avocado {
         position: absolute;
-        right: -150px;
-        top: -70px;
+        right: 20px;
+        top: 80px;
         width: 178px;
     }
 
     &__beans {
         position: absolute;
         bottom: 0;
-        left: -220px;
+        left: 0;
         width: 105px;
     }
 }
@@ -170,6 +173,7 @@ body {
         gap: 48px;
         list-style-type: none;
         margin: 0;
+        margin-right: 12rem;
         padding-left: 0;
     }
 
@@ -229,19 +233,20 @@ body {
 }
 
 .container {
-    position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     padding-left: 15px;
     padding-right: 15px;
 }
 
 .title {
     margin: 0;
+    margin-top: 2rem;
     font-family: $font-cormorant;
     font-weight: 700;
     font-size: 8rem;
+    line-height: 8rem;
 
     &__span {
         font-style: italic;
@@ -258,15 +263,17 @@ body {
     margin: 0;
     &_size-s {
         font-size: 1.8rem;
+        line-height: 1.5;
     }
 }
 
 .link {
     display: inline-block;
-    padding: 2.5rem 4.2rem;
+    padding: 2rem 4.2rem;
     border-radius: 3.8rem;
     background-color: $orange;
     box-shadow: 0px 1rem 1.2rem .2rem rgba(207, 92, 13, 0.2);
+    letter-spacing: 0.13rem;
     text-decoration: none;
     text-transform: uppercase;
     color: $white;
