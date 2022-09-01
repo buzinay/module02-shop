@@ -19,11 +19,12 @@ body {
 
 .main {
     position: relative;
-    padding-bottom: 187px;
+    padding-bottom: 17rem;
     background: url('../images/main.png') no-repeat;
     background-size: cover;
     background-position-x: center;
     overflow: hidden;
+    z-index: 0;
     &__item {
         max-width: 37.8rem;
         margin-left: 12rem;
@@ -75,6 +76,7 @@ body {
         position: absolute;
         padding: 0;
         text-align: left;
+        line-height: 1.5;
         border: none;
         background-color: transparent;
 
@@ -89,32 +91,32 @@ body {
         }
 
         &_1 {
-            top: 40px;
-            left: 75px;
+            top: 43px;
+            left: 64px;
 
             &::before {
-                top: 17px;
-                left: 81px;
+                top: 25px;
+                left: 85px;
             }
         }
 
         &_2 {
-            top: 200px;
-            right: -20px;
+            top: 191px;
+            right: 3px;
 
             &::before {
-                top: 12px;
-                left: -23px;
+                top: 20px;
+                left: -25px;
             }
         }
 
         &_3 {
-            bottom: -50px;
-            right: 280px;
+            bottom: -49px;
+            right: 244px;
 
             &::before {
-                bottom: 47px;
-                right: 33px; 
+                bottom: 58px;
+                right: 31px; 
             }
         }
     }
@@ -126,9 +128,10 @@ body {
 
     &__tomato {
         position: absolute;
-        right: 60px;
-        bottom: 0;
+        right: -45px;
+        bottom: 100px;
         width: 110px;
+        z-index: -1;
     }
 
     &__pepper {
@@ -136,6 +139,7 @@ body {
         top: 400px;
         left: 40px;
         width: 86px;
+        z-index: -1;
     }
 
     &__cucumber {
@@ -143,13 +147,15 @@ body {
         top: 0;
         left: 35%;
         width: 85px;
+        z-index: -1;
     }
 
     &__avocado {
         position: absolute;
-        right: 20px;
-        top: 80px;
+        right: 0;
+        top: 56px;
         width: 178px;
+        z-index: -1;
     }
 
     &__beans {
@@ -157,6 +163,7 @@ body {
         bottom: 0;
         left: 0;
         width: 105px;
+        z-index: -1;
     }
 }
 
@@ -165,7 +172,7 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1440px;
-    margin: 0 auto 6rem;
+    margin: 0 auto 5rem;
     padding: 4rem 15px 0 15px;
 
     &__nav {
@@ -242,7 +249,7 @@ body {
 
 .title {
     margin: 0;
-    margin-top: 2rem;
+    margin-top: 3.5rem;
     font-family: $font-cormorant;
     font-weight: 700;
     font-size: 8rem;
@@ -265,6 +272,11 @@ body {
         font-size: 1.8rem;
         line-height: 1.5;
     }
+
+    &_size-m {
+        font-size: 2.4rem;
+        line-height: 1.5;
+    }
 }
 
 .link {
@@ -279,5 +291,47 @@ body {
     color: $white;
 }
 
+.offer {
+    background: url('../images/offer.png') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+    &__text {
+        margin-top: 5.8rem;
+        max-width: 700px;
+    }
+
+    &__slider {
+        padding-top: 100px;
+        overflow: hidden;
+    }
+}
+
+.swiper {
+    overflow: initial;
+
+    &-slide {
+        border: 1px solid black;
+    }
+
+    &-pagination {
+        display: none; 
+    }
+
+    &-button-next, &-button-prev {
+        top: -65px;
+        right: 0;
+    } 
+
+    &-button-prev {
+        left: auto;
+        right: 75px;
+    }
+
+    &-button-next::after, &-button-prev::after {
+        color: $green;
+        font-size: 2rem;
+    }
+}
 
   
