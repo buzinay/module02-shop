@@ -13,6 +13,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    line-height: 1.5;
     font-family: $font-jost;
     color: $green;
 }
@@ -270,12 +271,10 @@ body {
     margin: 0;
     &_size-s {
         font-size: 1.8rem;
-        line-height: 1.5;
     }
 
     &_size-m {
         font-size: 2.4rem;
-        line-height: 1.5;
     }
 }
 
@@ -295,14 +294,15 @@ body {
     background: url('../images/offer.png') no-repeat;
     background-size: cover;
     background-position-x: center;
+    padding-bottom: 12.8rem;
 
     &__text {
-        margin-top: 5.8rem;
+        margin-top: 5.7rem;
         max-width: 700px;
     }
 
     &__slider {
-        padding-top: 100px;
+        padding-top: 9.5rem;
         overflow: hidden;
     }
 }
@@ -311,7 +311,95 @@ body {
     overflow: initial;
 
     &-slide {
-        border: 1px solid black;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 520px;
+        box-sizing: border-box;
+        padding: 4rem 3.7rem;
+        border: 1px solid rgba($green, .4);
+        border-radius: 2rem;
+        background-repeat: no-repeat;
+        background-size: cover;
+        z-index: 0;
+
+        &_milk {
+            background: url(../images/milk.png);
+        }
+
+        &_pasta {
+            background: url(../images/pasta.png);
+        }
+
+        &_meet {
+            background: url(../images/meet.png);
+        }
+
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, .4) inset;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                background-color: rgba($white, 0.55);
+                border-radius: 20px;
+                z-index: -1;
+            }
+        }
+
+        &:hover .swiper-slide__hover {
+            height: 233px;
+        }
+
+        &__title {
+            margin: 0;
+            font-family: $font-cormorant;
+            font-weight: 700;
+            font-size: 3rem;
+            letter-spacing:0.03rem;
+            line-height: 0.5;
+        }
+
+        &__hover {
+            height: 0;
+        }
+
+        &__text {
+            margin: 0;
+            margin-top: 3.5rem;
+            margin-bottom: 3.5rem;
+            max-width: 265px;
+            color: rgba($green, .7);
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            color: $green;
+            text-decoration: none;
+            text-transform: uppercase;
+            opacity: .8;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &::before {
+                content: '';
+                width: 30px;
+                height: 30px;
+                background: url(../images/plus.svg) no-repeat;
+                background-size: cover;
+            }
+        }
+
+
     }
 
     &-pagination {
@@ -320,7 +408,7 @@ body {
 
     &-button-next, &-button-prev {
         top: -65px;
-        right: 0;
+        right: -8px;
     } 
 
     &-button-prev {
@@ -329,9 +417,83 @@ body {
     }
 
     &-button-next::after, &-button-prev::after {
-        color: $green;
+        color: rgba($green, .4);
         font-size: 2rem;
+    }
+
+    &-button-next:hover::after, &-button-prev:hover::after {
+        color: rgba($green, 1);
     }
 }
 
+.about {
+    background: url('../images/about.png') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    padding-bottom: 12.8rem;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6rem;
+    }
+
+    &__text {
+        margin-left: 12rem;
+        max-width: 590px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        width: 467px;
+        margin: 0;
+        list-style: none;
+        
+        
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+        font-family: $font-cormorant;
+        font-style: italic;
+        font-weight: 700;
+        font-size: 3rem;
+
+        &::before {
+            content: '';
+            width: 85px;
+            height: 85px;
+            border: 1px solid rgba($green, .4);
+            border-radius: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        &_fruits {
+            &::before {
+                background-image: url(../images/fruits.png);
+                background-size: 43px 40px;
+            }
+        }
+
+        &_traditional {
+            &::before {
+                background-image: url(../images/traditional.png);
+                background-size: 40px 40px;
+            }
+        }
+
+        &_good {
+            &::before {
+                background-image: url(../images/good.png);
+                background-size: 45px 40px;
+            }
+        }
+    }
+}
   
