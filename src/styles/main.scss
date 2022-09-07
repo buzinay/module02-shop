@@ -32,6 +32,10 @@ body {
         margin-top: 6rem;
     }
 
+    &__text {
+        padding-top: 3.7rem;
+    }
+
     &__link {
         margin-top: 6rem;
     }
@@ -255,7 +259,6 @@ body {
 
 .title {
     margin: 0;
-    margin-top: 3.7rem;
     font-family: $font-cormorant;
     font-weight: 700;
     font-size: 8rem;
@@ -281,12 +284,21 @@ body {
     &_size-m {
         font-size: 2.4rem;
     }
+
+    &__accent {
+        color: $orange;
+    }
+
+    &__link {
+        color: $green;
+    }
 }
 
 .link {
     display: inline-block;
     padding: 2rem 4.2rem;
     border-radius: 3.8rem;
+    border: none;
     background-color: $orange;
     box-shadow: 0px 1rem 1.2rem .2rem rgba(207, 92, 13, 0.2);
     letter-spacing: 0.13rem;
@@ -297,6 +309,11 @@ body {
     &_size-m {
         padding: 2rem 5rem;
     }
+
+    &_size-s {
+        padding: 1.7rem 3.2rem;
+        font-size: 1.4rem;
+    }
 }
 
 .offer {
@@ -304,6 +321,10 @@ body {
     background-size: cover;
     background-position-x: center;
     padding-bottom: 12.8rem;
+
+    &__title {
+        margin-top: 3.7rem;
+    }
 
     &__text {
         margin-top: 5.7rem;
@@ -321,10 +342,6 @@ body {
 
     &-slide {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 520px;
         box-sizing: border-box;
         padding: 4rem 3.7rem;
         border: 1px solid rgba($green, .4);
@@ -350,6 +367,10 @@ body {
         }
 
         &_white {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 520px;
             justify-content: flex-end;
             &:hover {
                 &::after {
@@ -384,7 +405,6 @@ body {
 
         &__title {
             margin: 0;
-            margin-bottom: 40px;
             font-family: $font-cormorant;
             font-weight: 700;
             font-size: 3rem;
@@ -395,8 +415,11 @@ body {
         &__description {
             max-width: 29rem;
             margin: 0;
+            margin-top: 4rem;
+            min-height: 55px;
             font-size: 1.8rem;
             color:rgba($green, .7);
+            overflow: hidden;
         }
 
         &__price {
@@ -441,6 +464,7 @@ body {
 
         &__img {
             width: auto;
+            object-fit: contain;
         }
 
         &__inner {
@@ -497,6 +521,11 @@ body {
         background-repeat: no-repeat;
         background-position: center center;
 
+        &_size-s {
+            width: 40px;
+            height: 40px;
+        }
+
     }
 
     &__minus {
@@ -518,6 +547,10 @@ body {
         font-size: 2.4rem;
         border: none;
 
+        &_size-s {
+            width: 31px;
+        }
+
     }
 }
 
@@ -526,6 +559,10 @@ body {
     background-size: cover;
     background-position-x: center;
     padding-bottom: 12.8rem;
+
+    &__title {
+        margin-top: 3.7rem;
+    }
 
     &__box {
         display: flex;
@@ -596,7 +633,14 @@ body {
 
 .trends {
     padding-top: 2.5rem;
-    padding-bottom: 200px;
+    padding-bottom: 13.5rem;
+    background: url('../images/trends.png') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+    &__title {
+        margin-top: 3.7rem;
+    }
 
     &__text {
         margin-top: 4rem;
@@ -604,3 +648,375 @@ body {
     }
 }
   
+.catalog {
+    padding-top: 1.5rem;
+    padding-bottom: 10rem;
+    background: url('../images/catalog.png') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+    &__title {
+        margin-top: 3.7rem;
+    }
+
+    &__text {
+        margin-top: 3.7rem;
+        margin-bottom: 8.8rem;
+    }
+
+    &__filter {
+        margin-bottom: 5rem;
+    }
+
+    &__button {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        margin: 6rem auto 0;
+        color: $green;
+        letter-spacing: 0.13rem;
+        text-transform: uppercase;
+        background: transparent;
+        border: none;
+        opacity: .8;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &::before {
+            content: '';
+            width: 25px;
+            height: 25px;
+            background: url(../images/refresh.svg) no-repeat;
+            background-size: 25px 25px;
+            background-position: center center;
+        }
+    }
+}
+
+.filter {
+    display: flex;
+    gap: 1.8rem;
+    margin-left: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        text-align: center;
+    }
+
+    &__link {
+        display: inline-block;
+        width: 230px;
+        padding: 2rem 0;
+        border: 1px solid rgba($green, 0.5);
+        border-radius: 50px;
+        font-size: 1.8rem;
+        color: rgba($green, 0.5);
+        text-decoration: none;
+
+        &:hover {
+            color: $orange;
+            border-color: $orange;
+        } 
+    }
+}
+
+.catalog-grid {
+   display: grid; 
+   grid-template-rows: 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: 20px;
+   height: 100%;
+
+   &__item {
+        box-sizing: border-box;
+        padding: 2.5rem 3rem 4rem 3rem;
+        border: 1px solid rgba($green, .4);       
+        border-radius: 2rem;
+
+        &:hover {
+            box-shadow: 0 0 0 2px rgba($green, .4) inset;
+        }
+   }
+
+   &__title {
+            margin: 0;
+            margin-top: 3rem;
+            font-family: $font-cormorant;
+            font-weight: 700;
+            font-size: 3rem;
+            letter-spacing:0.03rem;
+            line-height: 0.5;
+        }
+
+    &__description {
+        max-width: 24rem;
+        margin: 0;
+        margin-top: 2.7rem;
+        height: 4.8rem;
+        font-size: 1.6rem;
+        color:rgba($green, .7);
+        overflow: hidden;
+    }
+
+    &__price {
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 2.6rem;
+        font-size: 2.4rem;
+    }
+
+    &__cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 100%;
+        max-width: 345px;
+        height: 200px;
+        max-height: 200px;
+        text-align: center;
+    }
+
+    &__img {
+        max-width: 350px;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+}
+
+.payment {
+    padding-top: 0;
+    padding-bottom: 13rem;
+    background: url('../images/payment.png') no-repeat;
+    background-size: cover;
+    background-position-x: center;
+
+    &__title {
+        margin-top: 3.7rem;
+    }
+
+    &__box {
+        display: flex;
+        align-items: flex-start;
+        gap: 16rem;
+        margin-top: 7.6rem;
+    }
+
+    &__part-delivery {
+        margin-left: 12rem;
+        max-width: 57rem;
+    }
+
+    &__part-delivery .description:nth-child(1) {
+        margin-bottom: 2.7rem;
+    }
+
+    &__part-pay {
+        max-width: 470px;
+
+    }
+
+    &__part-pay .description:nth-child(1) {
+        margin-bottom: 4.5rem;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: flex-start;
+        gap: 3rem;
+        margin: 0;
+        padding-left: 0;
+        list-style: none;       
+    }
+
+    &__item {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: stretch;
+        font-size: 0;
+
+        &::before {
+            content: '';
+            background-repeat: no-repeat;
+            background-position: center;
+            opacity: 0.4;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+
+        &:nth-child(1)::before {
+            background: url(../images/mastercard.svg);
+            width: 53px;
+            height: 32px;
+            background-size: 53px 32px;
+        }
+
+        &:nth-child(2)::before {
+            background: url(../images/visa.svg);
+            width: 74px;
+            height: 23px;
+            background-size: 74px 23px;
+        }
+
+        &:nth-child(3)::before {
+            background: url(../images/paypal.svg);
+            width: 87px;
+            height: 24px;
+            background-size: 87px 24px;
+        }
+    }
+}   
+
+.contacts {
+    padding-top: 6rem;
+    padding-bottom: 13rem;
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__info {
+        max-width: 52rem;
+    }
+
+    &__inner {
+        margin-top: 6rem;
+        margin-left: 12rem;
+
+    }
+
+    &__list {
+        margin: 0;
+        margin-top: 5.7rem;
+        padding: 0;
+        list-style: none;
+    }
+
+    &__item {
+        &:first-child{
+            margin-bottom: 1rem;
+        }
+
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: 2.7rem;
+        font-size: 2.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: $green;
+
+        &:hover {
+            color: $orange;
+        }
+
+        &::before {
+            content: '';
+        } 
+
+        &_tel::before {
+            width: 36px;
+            height: 28px;
+            background: url(../images/phone.svg);
+            background-size: 32px 28px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        &_email::before {
+            width: 36px;
+            height: 28px;
+            background: url(../images/mail.svg);
+            background-size: 36px 27px;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    &__form{
+        flex-basis: 59rem;
+        flex-grow: 0;
+
+    }
+}
+
+.card {
+    padding: 2.6rem 5.9rem 4rem;
+    border: 2px solid rgba($green, .4);       
+    border-radius: 2rem;
+    box-sizing: border-box;
+
+    &__title {
+        margin: 0;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        font-family: $font-cormorant;
+    }
+    
+    &__label {
+        display: block;
+        margin-bottom: 1rem;
+        margin-left: .6rem;
+        font-size: 1.2rem;
+    }
+    
+    &__input {
+        display: block;
+        width: 100%;
+        border: 1px solid rgba($green, .4);
+        border-radius: 20px;
+        margin-bottom: 2.5rem;
+        padding: 2.2rem 3rem;
+        box-sizing: border-box;
+
+        &:focus {
+            border: 1px solid rgba($green, 1);
+            outline: none;
+        }
+
+        &:invalid {
+            border-color: red;
+        }
+    }
+    
+    &__check {
+        max-width: 36rem;
+        margin: 0;
+        margin-top: 2.5rem;
+        font-size: 1.2rem;
+        color: rgba($green, .6);
+        line-height: 1.5;
+    }
+
+    &__link {
+        margin-top: 1.4rem;
+    }
+    
+    &__docs {
+        color: rgba($green, .6);
+        text-decoration: none;
+        border-bottom: 1px solid #dfe0db;
+    }
+}
+
