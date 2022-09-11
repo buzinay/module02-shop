@@ -17,14 +17,14 @@ body {
     line-height: 1.5;
     font-family: $font-jost;
     color: $green;
+    background: url('../images/fon.png') no-repeat;
+    background-size: cover;
+    background-position-x: center;
 }
 
 .main {
     position: relative;
     padding-bottom: 17rem;
-    background: url('../images/main.png') no-repeat;
-    background-size: cover;
-    background-position-x: center;
     overflow: hidden;
     z-index: 0;
     &__item {
@@ -75,7 +75,7 @@ body {
         width: 92%;
         height: 92%;
         border-radius: 100%;
-        box-shadow: 10px 20px 30px 0 rgb(0 0 0 / 30%);
+        animation: shadow linear 4s infinite;
     }
 
     &__btn {
@@ -181,18 +181,22 @@ body {
 
 .header {
     display: flex;
-    justify-content: space-between;
+    gap: 8rem;
     align-items: center;
     max-width: 1440px;
     margin: 0 auto 5rem;
     padding: 4rem 15px 0 15px;
+
+    &__nav-wrapper {
+        flex-grow: 1;
+        margin-left: 3.5rem;
+    }
 
     &__nav {
         display: flex;
         gap: 48px;
         list-style-type: none;
         margin: 0;
-        margin-right: 12rem;
         padding-left: 0;
     }
 
@@ -206,9 +210,12 @@ body {
     } 
 
     &__tel {
+        flex-basis: 18rem;
         font-weight: 500;
         color: $green;
         text-decoration: none;
+        text-align: right;
+        letter-spacing: 0.13rem;
         transition: 0.3s;
 
         &:hover {
@@ -345,9 +352,6 @@ body {
 }
 
 .offer {
-    background: url('../images/offer.png') no-repeat;
-    background-size: cover;
-    background-position-x: center;
     padding-bottom: 12.8rem;
 
     &__title {
@@ -588,9 +592,6 @@ body {
 }
 
 .about {
-    background: url('../images/about.png') no-repeat;
-    background-size: cover;
-    background-position-x: center;
     padding-bottom: 12.8rem;
 
     &__title {
@@ -639,6 +640,7 @@ body {
             border-radius: 100%;
             background-repeat: no-repeat;
             background-position: center;
+            animation: scale 3s linear infinite;
         }
 
         &_fruits {
@@ -652,6 +654,7 @@ body {
             &::before {
                 background-image: url(../images/traditional.png);
                 background-size: 40px 40px;
+                animation-delay: 1s;
             }
         }
 
@@ -659,6 +662,7 @@ body {
             &::before {
                 background-image: url(../images/good.png);
                 background-size: 45px 40px;
+                animation-delay: 2s;
             }
         }
     }
@@ -667,9 +671,6 @@ body {
 .trends {
     padding-top: 2.5rem;
     padding-bottom: 13.5rem;
-    background: url('../images/trends.png') no-repeat;
-    background-size: cover;
-    background-position-x: center;
 
     &__title {
         margin-top: 3.7rem;
@@ -684,9 +685,6 @@ body {
 .catalog {
     padding-top: 1.5rem;
     padding-bottom: 10rem;
-    background: url('../images/catalog.png') no-repeat;
-    background-size: cover;
-    background-position-x: center;
 
     &__title {
         margin-top: 3.7rem;
@@ -834,10 +832,6 @@ body {
 
 .payment {
     padding-top: 0;
-    padding-bottom: 13rem;
-    background: url('../images/payment.png') no-repeat;
-    background-size: cover;
-    background-position-x: center;
 
     &__title {
         margin-top: 3.7rem;
@@ -891,11 +885,12 @@ body {
             background-repeat: no-repeat;
             background-position: center;
             opacity: 0.4;
-            transition: opacity .3s;
+            transition: .3s;
         }
 
         &:hover::before {
             opacity: 1;
+            transform: scale(1.05);
         }
 
         &:nth-child(1)::before {
@@ -1059,9 +1054,10 @@ body {
 }
 
 .footer {
-    background: url('../images/footer.png') no-repeat;
-    background-size: cover;
-    background-position-x: center;
+
+    &__wrapper {
+        border-top: 2px solid #e2e3df;
+    }
 
     &__box {
         display: flex;
@@ -1142,10 +1138,6 @@ body {
     padding: 0;
     list-style: none;
 
-    &__item {
-
-    }
-
     &__link {
         display: block;
         width: 50px;
@@ -1178,3 +1170,30 @@ body {
     }
 }
   
+@keyframes shadow {
+    0% {
+        box-shadow: 0 0 0 0 rgba($green, .5);
+    }
+
+    50% {
+        box-shadow: 20px 20px 35px 0 rgba($green, .5);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba($green, .5);
+    }
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
