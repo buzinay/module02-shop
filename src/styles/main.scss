@@ -2,6 +2,7 @@
 
 $green: #27300f;
 $orange: #d26a22;
+$dark-orange: #bf601f;
 $white: #ffffff;
 
 $font-jost: 'Jost', sans-serif;
@@ -93,6 +94,7 @@ body {
             background-color: $green;
             border-radius: 100%;
             box-shadow: 0 0 0 4px $white, 0 0 0 5px $green;
+            transition: 0.3s;
         }
 
         &:hover::before{
@@ -207,6 +209,7 @@ body {
         font-weight: 500;
         color: $green;
         text-decoration: none;
+        transition: 0.3s;
 
         &:hover {
             color: $orange;
@@ -225,6 +228,7 @@ body {
         background-repeat: no-repeat;
         background-size: 1.7rem 1.5rem;
         background-position: center center;
+        transition: 0.3s;
 
         &:hover {
             background-color: $green;
@@ -314,6 +318,7 @@ body {
 
 .link {
     display: inline-block;
+    cursor: pointer;
     padding: 2rem 4.2rem;
     border-radius: 3.8rem;
     border: none;
@@ -323,6 +328,7 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     color: $white;
+    transition: background-color .3s;
 
     &_size-m {
         padding: 2rem 5rem;
@@ -331,6 +337,10 @@ body {
     &_size-s {
         padding: 1.7rem 3.2rem;
         font-size: 1.4rem;
+    }
+
+    &:hover {
+        background-color: $dark-orange;
     }
 }
 
@@ -367,6 +377,7 @@ body {
         background-repeat: no-repeat;
         background-size: cover;
         z-index: 0;
+        transition: box-shadow 0.3s;
 
         &_milk {
             background: url(../images/milk.png);
@@ -390,6 +401,7 @@ body {
             justify-content: space-between;
             min-height: 520px;
             justify-content: flex-end;
+            transition: 0.3s;
             &:hover {
                 &::after {
                     content: '';
@@ -405,12 +417,13 @@ body {
             }
         }
 
-        &:hover .swiper-slide__hover {
-            height: 233px;
-        }
-
         &__hover {
             height: 0;
+            transition: 0.5s;
+        }
+
+        &:hover .swiper-slide__hover {
+            height: 233px;
         }
 
         &__text {
@@ -455,6 +468,7 @@ body {
             text-decoration: none;
             text-transform: uppercase;
             opacity: .8;
+            transition: .3s;
 
             &:hover {
                 opacity: 1;
@@ -519,6 +533,7 @@ body {
     &-button-next::after, &-button-prev::after {
         color: rgba($green, .4);
         font-size: 2rem;
+        transition: .3s;
     }
 
     &-button-next:hover::after, &-button-prev:hover::after {
@@ -698,6 +713,7 @@ body {
         background: transparent;
         border: none;
         opacity: .8;
+        transition: .3s;
 
         &:hover {
             opacity: 1;
@@ -734,6 +750,7 @@ body {
         font-size: 1.8rem;
         color: rgba($green, 0.5);
         text-decoration: none;
+        transition: .3s;
 
         &:hover {
             color: $orange;
@@ -754,6 +771,7 @@ body {
         padding: 2.5rem 3rem 4rem 3rem;
         border: 1px solid rgba($green, .4);       
         border-radius: 2rem;
+        transition: .3s;
 
         &:hover {
             box-shadow: 0 0 0 2px rgba($green, .4) inset;
@@ -873,6 +891,7 @@ body {
             background-repeat: no-repeat;
             background-position: center;
             opacity: 0.4;
+            transition: opacity .3s;
         }
 
         &:hover::before {
@@ -944,6 +963,7 @@ body {
         font-weight: 700;
         text-decoration: none;
         color: $green;
+        transition: .3s;
 
         &:hover {
             color: $orange;
@@ -1063,7 +1083,6 @@ body {
         margin: 0;
         padding: 0;
         list-style: none;
-        font-size: 1.8rem;
     }
 
     &__item {
@@ -1074,8 +1093,15 @@ body {
     }
 
     &__link {
+        display: block;
         color: $green;
         text-decoration: none;
+        font-size: 1.8rem;
+        transition: .3s;
+
+        &_tel {
+            font-size: 2.7rem;
+        }
 
         &:hover {
             color: $orange;
@@ -1089,27 +1115,6 @@ body {
         justify-content:space-between;
         min-height: 165px;
     }
-
-    &__tel {
-        display: block;
-        font-size: 2.7rem;
-        color: $green;
-        text-decoration: none;
-        &:hover {
-            color: $orange;
-        }
-    }
-
-    &__email {
-        display: block;
-        font-size: 1.8rem;
-        line-height: 2.5;
-        color: $green;
-        text-decoration: none;
-        &:hover {
-            color: $orange;
-        }
-    }
     
     &__text {
         display: flex;
@@ -1121,6 +1126,7 @@ body {
     &__author a {
         text-decoration: none;
         color:rgba($green, .6);
+        transition: .3s;
 
         &:hover {
             color:rgba($green, 1);
@@ -1149,6 +1155,7 @@ body {
         background-repeat: no-repeat;
         background-position: center center;
         opacity: 0.8;
+        transition: .3s;
 
         &:hover {
             opacity: 1;  
@@ -1170,3 +1177,4 @@ body {
         background-size: auto 1.8rem;
     }
 }
+  
